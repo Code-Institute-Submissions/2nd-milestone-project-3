@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tauro Atminties žaidimas</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet prefetch" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://github.com/tstauras83/Scoding-interview-task/assets/styles/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Tauro Atminties žaidimas </h1>
+            <p style="text-align: center;">you are aiming to get the lowest score possible.</p>
+        </header>
+
+        <section class="score-panel">
+            <div class="restart" onclick=startGame()>
+                <i class="fa fa-repeat" aria-hidden="true"></i>
+            </div>
+            <span class="moves">0</span> Moves
+            <div class="timer">
+            </div>
+        </section>
+
+        <ul class="deck" id="card-deck">
+            <li class="card" type="chess">
+                <i class="fa fa-chess"></i>//
+            </li>
+            <li class="card" type="steam">
+                <i class="fa fa-steam-symbol">//
+            </li>
+            <li class="card match" type="anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="bolt">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
+            </li>
+            <li class="card match" type="anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card" type="chess">
+                <i class="fa fa-chess"></i>//
+            </li>
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card open show" type="bolt">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card" type="steam">
+                <i class="fab fa-steam-symbol"></i>//
+            </li>
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
+            </li>
+        </ul>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2 class="content1">HEY! YOU WIN!!</h2>
+                <a class="close" href=#>×</a>
+                <div class="content-1">
+                    Welldone.
+                </div>
+                <div class="content-2">
+                    <p>You made <span id=finalMove> </span> moves </p>
+                    <p>in <span id=totalTime>00.00</span> </p>
+                    <p>Mistakes: <span id=finalMistakes>00.00</span></p>
+                    <p>Overall score: <span id=Rating>00.00</span></p>
+                </div>
+                <button id="play-again" onclick="playAgain()">
+                    Try again?</a>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://github.com/tstauras83/Scoding-interview-task/assets/lib/js/app.js"></script>
+
+</body>
+
+</html>

@@ -9,9 +9,6 @@ const deck = document.getElementById("card-deck");
 let moves = 0;
 let counter = document.querySelector(".moves");
 
-//constsatn moves
-const finalMoves = moves;
-
 // declaring variable of matchedCards
 let matchedCard = document.getElementsByClassName("match");
 
@@ -70,6 +67,10 @@ function startGame() {
     // reset moves
     moves = 0;
     counter.innerHTML = moves;
+
+    //reset mistakes
+    mistakes = 0;
+
     //reset timer
     second = 0;
     minute = 0;
@@ -83,6 +84,7 @@ function startGame() {
 // @description toggles open and show class to display cards
 var displayCard = function() {
     this.classList.toggle("open");
+    this.classList.toggle("bull1")
     this.classList.toggle("show");
     this.classList.toggle("disabled");
 };
@@ -98,6 +100,7 @@ function cardOpen() {
             matched();
         } else {
             unmatched();
+            mistakes++;
         }
     }
 }
@@ -174,6 +177,8 @@ function moveCounter() {
 }
 
 
+
+
 // @description game timer
 var second = 0,
     minute = 0;
@@ -208,22 +213,18 @@ function congratulations() {
 
         // show congratulations modal
         modal.classList.add("show");
-        tRating = moves + minute + second + -1;
+        tRating = moves + minute + second + mistakes + -1;
         //showing move, rating, time on modal
         document.getElementById("finalMove").innerHTML = moves;
-
+        document.getElementById("finalMistakes").innerHTML = mistakes;
         document.getElementById("Rating").innerHTML = (Math.round(tRating * 100) / 100).toFixed(2);
         document.getElementById("totalTime").innerHTML = finalTime;
-
         //closeicon on modal
         closeModal();
     }
 }
 
-//function Rating(finalMoves, finalTime) {
-//    finalMoves * finalTime;
-//    return Rating;
-//}
+
 
 
 // @description close icon on modal
