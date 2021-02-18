@@ -3,7 +3,7 @@ var oXHR = new XMLHttpRequest();
 
 // Initiate request.
 oXHR.onreadystatechange = reportStatus;
-oXHR.open("GET", "../../assets/lib/js/leaderboard.json", true); // get json file.
+oXHR.open("GET", "https://tstauras83.github.io/Scoding-interview-task/assets/lib/js/leaderboard.json", true); // get json file.
 oXHR.send();
 
 function reportStatus() {
