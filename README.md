@@ -104,3 +104,5 @@ only media in the file are from fontawesome and are obtained from their free lib
 ### Acknowledgements
 
 - I received inspiration for this project from multiple project both online and on youtube that combined to create this.
+- https://www.youtube.com/watch?v=tjyDOHzKN0w
+- https://dev.to/fakorededamilola/create-a-memory-game-with-js-1l9j
