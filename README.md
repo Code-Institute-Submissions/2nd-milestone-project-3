@@ -2,6 +2,8 @@
 
 A memory game designed to test and improve the mind and the players skills with a simple scoring system where the lowest score is your objective.
 
+GitHub Pages link: https://tstauras83.github.io/2nd-milestone-project/Index.html
+
 ## Requirements
 
     1. Cards are to be shuffled on load or restart
